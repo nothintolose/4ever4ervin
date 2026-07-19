@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>4ever 4evin.</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Lora:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="opening" id="opening">
+
+<div class="opening-content">
+
+<h1>
+
+4ever 4evin.
+
+</h1>
+
+<p>
+
+(tap anywhere)
+
+</p>
+
+</div>
+
+</div>
+
+<div class="letter hidden" id="letter">
+
+<section class="intro">
+
+<p>
+
+i picked these little things with u in mind.
+
+</p>
+
+<p>
+
+nothin extravagant,
+
+<br>
+
+just little things i thought might quietly fit into ur everyday lyfe
+
+</p>
+
+</section>
+
+<div class="divider"></div>
+
+<section class="memory">
+
+<h3>
+
+do u remember?
+
+</h3>
+
+<h4>
+
+i do.
+
+</h4>
+
+<p>
+
+the day i gave u coffee and toast from Blend n Beans,
+
+u sent me a pict just to prove u actually drank the coffee
+
+(one of the cutest things u've ever done by the way).
+
+</p>
+
+<p>
+
+i noticed u put tissues under ur iced coffee,
+
+kinda messy
+
+(a lot of tissues under ur cup)
+
+</p>
+
+<p>
+
+and like a messi when playing football
+
+(u even placed your coffee near the corner of the table :v)
+
+</p>
+
+<p>
+
+soo i thought u might like a coaster instead.
+
+</p>
+
+<p>
+
+it's a diatomite coaster.
+
+</p>
+
+<p>
+
+it absorbs all the water from your iced coffee.
+
+</p>
+
+<p>
+
+tissues under ur iced coffee?
+
+</p>
+
+<p>
+
+not anymore.
+
+</p>
+
+<p class="tech">
+
+— TECHNOLOGIA
+
+</p>
+
+</section>
+
+<div class="divider"></div>
+
+<section class="memory">
+
+<h3>
+
+do u remember?
+
+</h3>
+
+<h4>
+
+i do.
+
+</h4>
+
+<p>
+
+there were a few times u asked for hand sanitizer
+after cash opname or when we were out together,
+
+</p>
+
+<p>
+
+so i figured it might be more useful than hand cream b4
+(iykyk).
+
+</p>
+
+<p>
+
+i hope this one always finds its way into your bag.
+
+</p>
+
+</section>
+
+<div class="divider"></div>
+
+<section class="birthday">
+
+<h2>
+
+happy birthday eviin
+
+</h2>
+
+<div class="space"></div>
+
+<p>
+
+too early?
+
+</p>
+
+<p>
+
+maybe.
+
+</p>
+
+<div class="space"></div>
+
+<p>
+
+July just got a little too excited for November.
+
+</p>
+
+<div class="space"></div>
+
+<p>
+
+...or maybe i did.
+
+</p>
+
+<p>
+
+HEHEHE
+
+</p>
+
+</section>
+
+<div class="divider"></div>
+
+<section class="quiet">
+
+<p class="italic">
+
+if life ever gets too loud...
+
+</p>
+
+<div class="space"></div>
+
+<p>
+
+take ur time
+
+</p>
+
+<p>
+
+and u know where to find me.
+
+</p>
+
+</section>
+
+<div class="divider"></div>
+
+<section class="ending">
+
+<div class="space-large"></div>
+
+<p>
+
+<strong>one more.</strong>
+
+</p>
+
+<div class="space"></div>
+
+<p>
+
+looks like..
+
+</p>
+
+<div class="space"></div>
+
+<p>
+
+i'll be spending (another)
+
+</p>
+
+<p>
+
+three months of my life
+
+</p>
+
+<p>
+
+orbiting yours.
+
+</p>
+
+</section>
+
+<div class="divider"></div>
+
+<section class="goodbye">
+
+<div class="space-large"></div>
+
+<p>
+
+see u
+
+</p>
+
+<p>
+
+at the next evaluation.
+
+</p>
+
+<div class="space-xl"></div>
+
+</section>
+
+</div>
+
+<script>
+
+const opening = document.getElementById("opening");
+const letter = document.getElementById("letter");
+
+opening.addEventListener("click",()=>{
+
+opening.classList.add("fade-out");
+
+setTimeout(()=>{
+
+opening.style.display="none";
+
+letter.classList.remove("hidden");
+
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
+
+},700);
+
+});
+
+const observer = new IntersectionObserver((entries)=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.classList.add("show");
+
+}
+
+});
+
+},{
+threshold:0.15
+});
+
+document.querySelectorAll(".intro,.memory,.birthday,.quiet,.ending,.goodbye").forEach(section=>{
+
+observer.observe(section);
+
+});
+
+</script>
+
+</body>
+
+</html>

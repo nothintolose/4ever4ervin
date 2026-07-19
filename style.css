@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Lora:wght@400;500&display=swap');
+
+:root{
+
+--bg:#FFF8F9;
+--text:#4C403D;
+--accent:#C8879D;
+--divider:#EFD6DD;
+--soft:#9B7A86;
+
+}
+
+*{
+
+margin:0;
+padding:0;
+box-sizing:border-box;
+
+}
+
+html{
+
+scroll-behavior:smooth;
+
+}
+
+body{
+
+background:var(--bg);
+color:var(--text);
+font-family:'Lora',serif;
+line-height:2;
+font-size:17px;
+overflow-x:hidden;
+
+}
+
+.opening{
+
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100vh;
+
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+
+background:var(--bg);
+
+z-index:999;
+
+transition:all .7s ease;
+
+}
+
+.opening-content{
+
+animation:float 3s ease-in-out infinite;
+
+}
+
+.opening h1{
+
+font-family:'Cormorant Garamond',serif;
+font-size:3.4rem;
+font-weight:600;
+letter-spacing:1px;
+color:var(--accent);
+
+}
+
+.opening p{
+
+margin-top:18px;
+font-size:.95rem;
+font-style:italic;
+color:var(--soft);
+
+}
+
+.fade-out{
+
+opacity:0;
+transform:scale(1.03);
+
+}
+
+.hidden{
+
+display:none;
+
+}
+
+.letter{
+
+width:min(720px,90%);
+margin:auto;
+padding-top:90px;
+padding-bottom:120px;
+
+}
+
+.divider{
+
+width:100%;
+height:1px;
+background:var(--divider);
+
+margin:70px 0;
+
+}
+
+.intro,
+.memory,
+.birthday,
+.quiet,
+.ending,
+.goodbye{
+
+opacity:0;
+transform:translateY(30px);
+transition:all .9s ease;
+
+}
+
+.show{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+.intro p,
+.memory p,
+.birthday p,
+.quiet p,
+.ending p,
+.goodbye p{
+
+margin:16px 0;
+
+}
+
+.memory h3,
+.memory h4{
+
+font-family:'Cormorant Garamond',serif;
+font-weight:600;
+color:var(--text);
+
+}
+
+.memory h3{
+
+font-size:1.7rem;
+
+}
+
+.memory h4{
+
+font-size:1.4rem;
+margin-bottom:28px;
+
+}
+
+.birthday h2{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:1.8rem;
+
+font-weight:600;
+
+color:var(--text);
+
+}
+
+.tech{
+
+margin-top:28px;
+font-size:.88rem;
+color:var(--soft);
+
+}
+
+.italic{
+
+font-style:italic;
+
+}
+
+.space{
+
+height:18px;
+
+}
+
+.space-large{
+
+height:36px;
+
+}
+
+.space-xl{
+
+height:90px;
+
+}
+
+.goodbye{
+
+text-align:left;
+
+}
+
+.goodbye p{
+
+font-family:'Cormorant Garamond',serif;
+font-size:1.45rem;
+
+}
+
+@keyframes float{
+
+0%{
+
+transform:translateY(0px);
+
+}
+
+50%{
+
+transform:translateY(-8px);
+
+}
+
+100%{
+
+transform:translateY(0px);
+
+}
+
+}
+
+::selection{
+
+background:#F6D9E1
